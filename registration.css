@@ -1,0 +1,122 @@
+body{
+     margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+.background-rg img{
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat; 
+  z-index: -1;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center ;
+}  
+.container{
+    width:60rem;
+    height:60rem;
+    background: transparent;
+    margin-top: 5rem;
+    margin: 12px;
+    padding: 12px;
+      border: transparent;
+
+}
+.container::before{
+    content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  border-radius: 18px;
+
+}
+
+/* Hover effect to glow the border */
+.container:hover {
+  box-shadow: 0 0 25px rgba(0, 201, 255, 0.4), 0 0 25px rgba(146, 254, 157, 0.4);
+}
+form label {
+  display: block;
+  margin: 12px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 80%;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(227, 215, 215);
+}
+
+.gender {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0;
+  align-items: center;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="button"] {
+  background-color: rgb(17, 112, 17);
+  color: white;
+}
+
+button[type="reset"] {
+  background-color: rgb(193, 36, 36);
+  color: white;
+
+  margin-right: 100px;
+}
+.Feedback-section textarea{
+    background-color:transparent;
+    width: 450px;
+    height: auto;
+    color: white;
+    border: 2px solid white;
+      box-shadow: 0 0 25px rgba(0, 201, 255, 0.4), 0 0 25px rgba(146, 254, 157, 0.4),0 0 25px rgb(193, 36, 36);
+
+}
+.Feedback-section label{
+    color:whitesmoke;
+}
+.Feedback-section ::placeholder
+{
+  color: white;
+  font-weight: bold;
+}
+.container h1{
+  color: rgb(210, 10, 10);
+  font-style: oblique;
+  font-family:fantasy;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 4px #0ff;
+
+}
+.container form{
+  color: rgb(2, 2, 2);
+  font-style: bold;
+  font-size: small;
+}

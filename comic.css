@@ -1,0 +1,50 @@
+body{
+    color: blueviolet;
+    text-shadow:20px;
+    font-size: larger;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: auto;
+}
+.comic-containe{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.comic-box{
+    text-align:start;
+    align-items:flex-start;
+    justify-items: auto;
+    justify-content: center;
+
+}
+.comic-box img{
+   width: 250px;
+  height: 300px;
+  border: 2px solid white;
+}
+.comic-box a {
+  display: block;
+  margin-top: 10px;
+  color: #e80e0e;
+  font-weight: bold;
+  text-decoration: none;
+}
+.comic-box a:hover{
+text-decoration: underline;
+}
+.bg-image{
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;  /* Don't repeat image */
+  z-index: -1;
+}
+.comic-pair {
+  display: flex;
+  gap: 80px;
+}
+

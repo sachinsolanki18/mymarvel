@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>  
+<!-- <script src="script.js " defer></script>    -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="registration.css">
+    <title>registration page</title>
+</head>
+<body>
+  
+    <div class="container">
+      <h1>Welcome to registration page</h1>
+        <div class="background-rg">
+            <img src="reg-bg.jpg" alt="page background"> 
+        </div>
+        <div class="form">
+        <form id="registrationForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="Email-Id">Email-Id:</label>
+      <input type="text" id="email" name="email" required>
+      <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      <label>Gender:</label>
+      <div class="gender">
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+      </div>
+
+      <label for="city">City:</label>
+      <select id="city" name="city" required>
+        <option value="">--Select City--</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+      </select>
+<div class="Feedback-section">  
+<form id="registrationForm" action="submitfeedback.php" method="post">
+  <!-- All your inputs together inside ONE form -->
+
+  <!-- Name, Email, Password, Gender, City etc. -->
+
+  <label for="feedback">Your Feedback:</label>
+  <textarea class="form-control" id="feedback" name="feedback" rows="5" placeholder="Share your thoughts..."></textarea>
+  <br>
+  <div class="buttons">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </div>
+</form>
+
+
+</body>
+</html>

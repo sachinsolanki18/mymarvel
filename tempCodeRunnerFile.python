@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+runs = [110, 120, 100, 150, 110, 140, 130, 180, 120, 250, 140, 110]
+
+plt.figure(figsize=(6, 8))
+plt.boxplot(runs, vert=True, patch_artist=True,
+            boxprops=dict(facecolor='lightblue', color='blue'),
+            medianprops=dict(color='red'),
+            whiskerprops=dict(color='blue'),
+            capprops=dict(color='blue'),
+            flierprops=dict(marker='o', markersize=8, markerfacecolor='red', markeredgecolor='red')) # For outliers
+
+plt.title('Box Plot of Cricket Team Runs')
+plt.ylabel('Runs Scored')
+plt.xticks([1], ['Team Runs']) # Just one box plot
+
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()

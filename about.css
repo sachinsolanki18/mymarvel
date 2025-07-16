@@ -1,0 +1,101 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; 
+  height: 100vh;
+  perspective: 1000px;
+  margin-right: 3rem;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+  
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: -4px; left: -4px; right: -4px; bottom: -4px;
+  border-radius: 16px;
+  background: linear-gradient(
+    270deg,
+    #07f2fa,
+    #c6590b,
+    #2b86c5,
+    #7d9709,
+    #ffab00,
+    #08f3d0
+  );
+  background-size: 1200% 1200%;
+  filter: blur(6px);
+  animation: borderGlow 10s ease infinite;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 250px;
+  height: 350px;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 7px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+;
+}
+
+.card-front {
+  background-color: darkred;
+
+}
+
+.card-front img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-back {
+  background-color: darkred;
+  transform: rotateY(180deg);
+  text-align:center;
+  font-family:monospace;
+}
